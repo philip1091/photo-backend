@@ -21,11 +21,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/images', [ImageController::class, 'allImages']);
 Route::get('/categories', [ImageController::class, 'allCategories']);
 Route::get('/pages', [ImageController::class, 'allPages']);
-
-// Route::get('/images/{page}', function(){
-//     return ['message' => 'hello'];
-// });
-
-// Route::get('/images/{category}', function(){
-//     return ['message' => 'hello'];
-// });
