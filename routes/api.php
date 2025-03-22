@@ -20,4 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/images', [ImageController::class, 'allImages']);
 Route::get('/categories', [ImageController::class, 'allCategories']);
+Route::get('/categories/{category}', [ImageController::class, 'singleCategory']);
 Route::get('/pages', [ImageController::class, 'allPages']);
+Route::get('/pages/{page}', [ImageController::class, 'singlePage']);

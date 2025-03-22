@@ -18,6 +18,7 @@ class ImageResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'image' => $this->image,
+            'compressed_image' => $this->compressed_image,
             'description' => $this->description,
             'hide' => $this->hide,
             'categories' => ImageCategoryResource::collection($this->imageCategory),

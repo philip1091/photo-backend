@@ -24,4 +24,21 @@ class ImageController extends Controller
         $pages = SitePage::all();
         return PageResource::collection($pages);
     }
+
+    public function singlePage($page) {
+        $page = SitePage::where('page_name', $page)->first();
+        if (!$page) {
+            return response()->json(['message' => 'Page not found'], 404);
+        }
+        $images = $page->images;
+        return new PageResource($page->load('images'));
+    }
+    public function singleCategory($category) {
+        $page = ImageCategory::where('name', $category)->first();
+        if (!$page) {
+            return response()->json(['message' => 'Page not found'], 404);
+        }
+        $images = $page->images;
+        return new CategoryResource($page->load('images'));
+    }
 }

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Voyager\CustomMediaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,4 +21,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+    // Route::post('media', [CustomMediaController::class, 'store'])->name('voyager.media.store');
+    // Route::post('media/upload', [CustomMediaController::class, 'store'])->name('voyager.media.upload');
+
 });
+
+//App\Http\Controllers\Voyager\CustomMediaController
